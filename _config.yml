@@ -1,0 +1,12 @@
+title: Tech Insights & Engineering Stories
+author: Ivan Tuzhilkin
+description: Systems Engineering, Golang, and DevOps best practices
+url: "https://1it.github.io"
+github_username: 1it
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
