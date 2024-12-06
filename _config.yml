@@ -3,6 +3,7 @@ author: Ivan Tuzhilkin
 description: Systems Engineering, Golang, and DevOps best practices
 url: "https://1it.github.io"
 github_username: 1it
+twitter_username: tuzhilkin
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 plugins:
