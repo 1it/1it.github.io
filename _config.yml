@@ -6,6 +6,7 @@ github_username: 1it
 twitter_username: tuzhilkin
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
+theme: jekyll-theme-clean-blog
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

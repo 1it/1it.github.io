@@ -4,15 +4,32 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# Hi there, I'm Iván! 👋  
+🌟 Experienced Systems Engineer / SRE / Software Developer 🌟  
+Building reliable systems, scalable solutions, and elegant codebases.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+🚀 I specialize in building and managing production systems, writing clean and efficient Golang code, and solving tough engineering challenges.  
+💻 Passionate about Linux, Kubernetes, AWS, and distributed systems.  
+🌱 Sharing knowledge and lessons learned the hard way through my career.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+**Core Competencies**
 
+🌟 My Areas of Expertise:
 
-[jekyll-organization]: https://github.com/jekyll
+    ☁️ Cloud Architecture: Expertise in designing resilient systems with AWS and GCP.
+    🤝 Cross-Functional Collaboration: Bridging gaps between engineering, product, and stakeholders.
+    🚀 Cloud-Native Application Design: Building scalable microservices and distributed systems.
+    📈 Strategic Technology Roadmapping: Planning for future scalability, efficiency, and innovation.
+    🔧 DevOps & SRE Practices: Proficient in CI/CD, automation, incident management, and site reliability.
+    👀 Monitoring & Observability: Designing robust systems with real-time monitoring, logging, and alerting.
+    🌱 Team Leadership & Mentoring: Empowering teams to grow, succeed, and innovate effectively.
+    🗣️ Stakeholder Communication: Clear, concise communication of technical goals and project outcomes.
+    🛠️ Developer Experience (DevX): Enhancing workflows, tooling, and environments for a seamless DevX strategy.
+
+🛠️ Languages: 
+[![Go](https://img.shields.io/badge/-Golang-blue)](https://golang.org) 
+[![Python](https://img.shields.io/badge/-Python-yellow)](https://www.python.org)  
+
+Personal Mission
+
+✨ I believe that technology should empower people, not overwhelm them. My focus is on creating systems and processes that drive efficiency, reliability, and innovation. I enjoy solving complex problems, mentoring engineers, and sharing knowledge to help others grow.
