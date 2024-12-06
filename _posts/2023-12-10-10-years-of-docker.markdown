@@ -30,9 +30,9 @@ Sebastian van Steyn (Runtime lead, Staff Software Engineer, Docker) and Frederic
 
 Docker solved many problems thanks to the following features:
 
-    - Isolation: Docker allows you to run applications in isolated containers, which provides a level of isolation comparable to virtual machines, but with much less overhead.
-    - Portability: Docker containers can be run on any platform where Docker is installed. This makes application development and deployment more convenient and predictable.
-    - Dependency management: Docker allows you to package an application and its dependencies into a single container, providing reliable dependency and version control.
+- Isolation: Docker allows you to run applications in isolated containers, which provides a level of isolation comparable to virtual machines, but with much less overhead.
+- Portability: Docker containers can be run on any platform where Docker is installed. This makes application development and deployment more convenient and predictable.
+- Dependency management: Docker allows you to package an application and its dependencies into a single container, providing reliable dependency and version control.
 
 ## Adoption of Docker by the community
 
@@ -44,19 +44,17 @@ There were a lot of certified specialists of different stripes on the market, an
 
 Many developers and administrators used Docker for other purposes, considering it as a more convenient and lightweight replacement for VMs. Treating Docker, containers as a full-fledged OS, people were running multiple processes in them, which was doable but not an intended use for a single-process environment.
 
-    For example, I witnessed how people launched their PHP application, an SSH daemon, and, for example, a Zabbix or Nagios agent using a supervisor (at that time things like Zabbix, Nagios and its forks were very popular).
+For example, I witnessed how people launched their PHP application, an SSH daemon, and, for example, a Zabbix or Nagios agent using a supervisor (at that time things like Zabbix, Nagios and its forks were very popular).
 
 Despite its impressive success and attention from the community, Docker also faced constructive criticism during the initial stages of its development. Comments were most often directed at the following aspects:
 
-    Process isolation: Docker does not provide the same degree of isolation as traditional virtual machines. This means that containers can influence each other, which raises security and stability concerns.
-    Network configuration complexity: Setting up networking for containers in Docker can be challenging, especially when working with multiple containers and microservice architectures.
-    Monolithic application: In the early days, Docker containers were sometimes used to run monolithic applications, which was not always the best practice for microservice architectures.
+- Process isolation: Docker does not provide the same degree of isolation as traditional virtual machines. This means that containers can influence each other, which raises security and stability concerns.
+- Network configuration complexity: Setting up networking for containers in Docker can be challenging, especially when working with multiple containers and microservice architectures.
+- Monolithic application: In the early days, Docker containers were sometimes used to run monolithic applications, which was not always the best practice for microservice architectures.
 
 It’s worth noting that the Docker community has been actively working to improve and resolve these issues. Subsequent versions of Docker introduced many improvements in security, isolation, and network management. Criticism became the driving force behind the development of Docker, and it has improved greatly over time.
 
-    There was also a strange moment in history when one day, without a notice and a proper explanation, Docker was renamed to Moby. This caused everyone to be at least bewildered. The change of name on GitHub and, accordingly, the change of all paths in the code was not very warmly received by the community and especially by the project’s contributors. From this point on, the commercial company Docker began to actively look for ways to make money on its product without abandoning its Open Source roots.
-
-    Read more about the event in the historical pull request in the Moby Git repositoryHub’e, Eng.
+There was also a strange moment in history when one day, without a notice and a proper explanation, Docker was renamed to Moby. This caused everyone to be at least bewildered. The change of name on GitHub and, accordingly, the change of all paths in the code was not very warmly received by the community and especially by the project’s contributors. From this point on, the commercial company Docker began to actively look for ways to make money on its product without abandoning its Open Source roots.
 
 ## What Docker really is
 
@@ -64,11 +62,11 @@ Docker is a tool that is used to automate the deployment of applications in ligh
 
 Docker consists of several key components:
 
-    Docker Engine: Docker core (daemon) that manages containers;
-    Docker Containers: isolated environments in which applications run;
-    Docker Images: templates for creating containers;
-    Docker Registry: a repository for storing and sharing Docker Images;
-    Docker CLI: console utility for interacting with the above components.
+- Docker Engine: Docker core (daemon) that manages containers;
+- Docker Containers: isolated environments in which applications run;
+- Docker Images: templates for creating containers;
+- Docker Registry: a repository for storing and sharing Docker Images;
+- Docker CLI: console utility for interacting with the above components.
 
 A large ecosystem of tools and products has developed around Docker. The Docker Hub service became so popular among developers that at some point Docker had to introduce limits on downloading public images — the total monthly number of downloads has long exceeded 10 billion.
 
@@ -80,11 +78,11 @@ Also, for example, Docker Compose allows you to define and run multiple containe
 
 In addition to Golang, which, together with the community, made a significant contribution to the success of the project, Docker stands on the powerful shoulders of Linux. It relies on a number of key technologies from the Linux operating system kernel to provide isolation and container management:
 
-    Namespaces: Linux kernel technology developed back in 2002. Docker uses namespaces such as PID (Process ID), Network, and Mount to create isolated namespaces. For example, using PID namespaces, each container can access only its own processes, which provides process isolation between containers.
-    Cgroups (Control Groups): a technology developed internally by Google engineers back in 2006. Control groups are used by Docker to limit the resources available to a container: CPU, memory, and disk space. This helps prevent resource starvation and ensures fair distribution of system capacity between containers.
-    Union File Systems: Docker uses “layered” file systems such as AUFS, OverlayFS, and Overlay2 to create lightweight and efficient container images. These layers allow sharing of common files among containers (using the same images), saving disk space.
-    Seccomp (Secure Computing Mode): Docker can use Seccomp to improve security. It limits the container’s access to system calls, which reduces the attack surface and prevents dangerous operations from being performed.
-    Capabilities: The Linux kernel provides various capabilities to perform privileged actions. Docker allows you to customize the set of capabilities available to the container to fine-tune security. For example, dropping “cap_net_bind_service” will disallow the container to use network ports from a range below 1024, like the default HTTP/HTTPS ports — 80/443.
+- Namespaces: Linux kernel technology developed back in 2002. Docker uses namespaces such as PID (Process ID), Network, and Mount to create isolated namespaces. For example, using PID namespaces, each container can access only its own processes, which provides process isolation between containers.
+- Cgroups (Control Groups): a technology developed internally by Google engineers back in 2006. Control groups are used by Docker to limit the resources available to a container: CPU, memory, and disk space. This helps prevent resource starvation and ensures fair distribution of system capacity between containers.
+- Union File Systems: Docker uses “layered” file systems such as AUFS, OverlayFS, and Overlay2 to create lightweight and efficient container images. These layers allow sharing of common files among containers (using the same images), saving disk space.
+- Seccomp (Secure Computing Mode): Docker can use Seccomp to improve security. It limits the container’s access to system calls, which reduces the attack surface and prevents dangerous operations from being performed.
+- Capabilities: The Linux kernel provides various capabilities to perform privileged actions. Docker allows you to customize the set of capabilities available to the container to fine-tune security. For example, dropping “cap_net_bind_service” will disallow the container to use network ports from a range below 1024, like the default HTTP/HTTPS ports — 80/443.
 
 All these technologies allow Docker to create isolated and lightweight containers running on the shared operating system kernel but with a high level of isolation from each other. Docker provides an environment in which applications can run independently of each other while ensuring efficient use of resources and simplifying container management.
 
@@ -92,13 +90,13 @@ All these technologies allow Docker to create isolated and lightweight container
 
 For maximum efficiency and security when using Docker, follow these practices:
 
-    Isolate dependencies: Each container should contain only the necessary dependencies to run the application. Use a multistage build, do not leave temporary files or packages in the image.
-    Follow the One Process Principle: Each container should only run one process. This makes it easier to track and manage containers.
-    Update images regularly: Update your images regularly to get the latest security updates and bug fixes.
-    Practice monitoring and logging: Use monitoring and logging tools to track container performance and identify problems.
-    Don’t forget about security: Don’t ignore basic security principles such as limiting host access and controlling access to resources.
-    Don’t run containers with privileged rights: avoid using flag — privileged, which gives the container full (privileged/root) access to the host.
-    Don’t store sensitive data in images: Do not include secret keys or passwords in Docker images. Use secret storage mechanisms such as Vault or Docker Secrets.
+- Isolate dependencies: Each container should contain only the necessary dependencies to run the application. Use a multistage build, do not leave temporary files or packages in the image.
+- Follow the One Process Principle: Each container should only run one process. This makes it easier to track and manage containers.
+- Update images regularly: Update your images regularly to get the latest security updates and bug fixes.
+- Practice monitoring and logging: Use monitoring and logging tools to track container performance and identify problems.
+- Don’t forget about security: Don’t ignore basic security principles such as limiting host access and controlling access to resources.
+- Don’t run containers with privileged rights: avoid using flag — privileged, which gives the container full (privileged/root) access to the host.
+- Don’t store sensitive data in images: Do not include secret keys or passwords in Docker images. Use secret storage mechanisms such as Vault or Docker Secrets.
 
 ## Why Docker is a revolution
 
